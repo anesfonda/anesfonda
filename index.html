@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form | Recreational Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container" id="booking-container">
+    <h1>Book Your Appointment</h1>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="service">Choose a Service:</label>
+        <select id="service" name="service" required>
+          <option value="Massage">Massage</option>
+          <option value="Spa">Spa</option>
+          <option value="Yoga Class">Yoga Class</option>
+          <option value="Fitness">Fitness</option>
+          <option value="Pool Area">Pool Area</option>
+        </select>
+      </div>
+      <button type="submit">Book Appointment</button>
+    </form>
+    <div id="message"></div>
+    <div id="booking-details" class="hidden">
+      <h3>Booking Details</h3>
+      <p><strong>Name:</strong> <span id="confirmed-name"></span></p>
+      <p><strong>Email:</strong> <span id="confirmed-email"></span></p>
+      <p><strong>Service:</strong> <span id="confirmed-service"></span></p>
+      <p><strong>Date:</strong> <span id="confirmed-date"></span></p>
+      <p><strong>Time:</strong> <span id="confirmed-time"></span></p>
+      <p>Your booking has been successfully made!</p>
+    </div>
+  </div>
+
+  <!-- Payment Section -->
+  <div class="payment-section" id="payment-section">
+    <h2>Payment Method</h2>
+    <p>Choose your preferred payment method:</p>
+    <div class="payment-options">
+      <label>
+        <input type="radio" name="payment" value="cash" checked>
+        Cash at the Reception
+      </label>
+      <label>
+        <input type="radio" name="payment" value="card">
+        Pay with Card
+      </label>
+    </div>
+    <button id="confirm-payment">Confirm Payment</button>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+        <!-- Removed social media links here -->
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+  <script src="script.js"></script>
+</body>
+</html>
